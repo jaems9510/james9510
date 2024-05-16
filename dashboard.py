@@ -158,3 +158,4 @@ with chart2:
                             showlegend=False, opacity=0.5))
     st.plotly_chart(fig4)
 # %%
+print("test")
