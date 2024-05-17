@@ -12,7 +12,6 @@ import matplotlib.pyplot as plt #한글 표기를 위한 패키지
 import os
 import numpy as np
 import time
-from tqdm import tqdm
 import warnings
 warnings.filterwarnings('ignore')
 # %%
@@ -157,5 +156,3 @@ with chart2:
                             y=df3["CP_WTEM"],
                             showlegend=False, opacity=0.5))
     st.plotly_chart(fig4)
-# %%
-print("test")
