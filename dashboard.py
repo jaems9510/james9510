@@ -28,8 +28,8 @@ fl = st.file_uploader(":file_folder: Upload a file", type=(["csv", "txt", "xlsx"
 #     df = pd.read_csv(fl, encoding="cp949")
 if True:
     upload_dir = r"C:/Users/YS/Desktop/연안_빅데이터/연안_빅데이터_플랫폼(업로드데이터)/22년도/04.연안_냉수대_속보_시계열_데이터/냉수대원본/플랫폼(업로드용)"
-    os.chdir(upload_dir)
-    df = pd.read_csv("C:/Users/YS/Desktop/연안_빅데이터/연안_빅데이터_플랫폼(업로드데이터)/22년도/04.연안_냉수대_속보_시계열_데이터/냉수대원본/플랫폼(업로드용)/2010-2023년 냉수대속보데이터.csv", encoding="cp949")
+    # os.chdir(upload_dir)
+    df = pd.read_csv("./2010-2023년 냉수대속보데이터.csv", encoding="cp949")
 
 df['CP_ISSUED_YMD'] = df['CP_ISSUED_YMD'].astype(str)
 df['CP_WTCH_YMD'] = df['CP_WTCH_YMD'].astype(str)
