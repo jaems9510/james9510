@@ -30,7 +30,7 @@ if True:
     upload_dir = r"C:/Users/YS/st"
     df = pd.read_csv("C:/Users/YS/st/2010-2023년 냉수대속보데이터.csv", encoding="cp949")
     # os.chdir(upload_dir)
-    df = pd.read_csv("./2010-2023년 냉수대속보데이터.csv", encoding="cp949")
+    # df = pd.read_csv("./2010-2023년 냉수대속보데이터.csv", encoding="cp949")
 
 df['CP_ISSUED_YMD'] = df['CP_ISSUED_YMD'].astype(str)
 df['CP_WTCH_YMD'] = df['CP_WTCH_YMD'].astype(str)
