@@ -27,7 +27,7 @@ fl = st.file_uploader(":file_folder: Upload a file", type=(["csv", "txt", "xlsx"
 #     st.write(filename)
 #     df = pd.read_csv(fl, encoding="cp949")
 if True:
-    upload_dir = r"https://github.com/jaems9510/james9510.git/"
+    upload_dir = "https://github.com/jaems9510/james9510.git/"
     df = pd.read_csv("2010-2023년 냉수대속보데이터.csv", encoding="cp949")
     # os.chdir(upload_dir)
     # df = pd.read_csv("./2010-2023년 냉수대속보데이터.csv", encoding="cp949")
