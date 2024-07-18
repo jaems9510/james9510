@@ -28,7 +28,7 @@ fl = st.file_uploader(":file_folder: Upload a file", type=(["csv", "txt", "xlsx"
 #     st.write(filename)
 #     df = pd.read_csv(fl, encoding="cp949")
 if True:
-    upload_dir = r"D:/연안_빅데이터/연안_빅데이터_플랫폼(업로드데이터)/22년도/04.연안_냉수대_속보_시계열_데이터/냉수대원본/플랫폼(업로드용)"
+    upload_dir = r"C:/Users/YS/st"
     # os.chdir(upload_dir)
     df = pd.read_csv("./2010-2023년 냉수대속보데이터.csv", encoding="cp949")
 
