@@ -14,7 +14,6 @@ import numpy as np
 import time
 import warnings
 warnings.filterwarnings('ignore')
-import tqdm
 # %%
 # * layout 정의 및 dataframe 정의
 st.set_page_config(page_title="연안 냉수대 시각화", page_icon=":bar_chart:", layout="wide")
@@ -29,6 +28,8 @@ fl = st.file_uploader(":file_folder: Upload a file", type=(["csv", "txt", "xlsx"
 #     df = pd.read_csv(fl, encoding="cp949")
 if True:
     upload_dir = r"C:/Users/YS/st"
+    os.chdir(upload_dir)
+    df = pd.read_csv("C:/Users/YS/st/2010-2023년 냉수대속보데이터.csv", encoding="cp949")
     # os.chdir(upload_dir)
     df = pd.read_csv("./2010-2023년 냉수대속보데이터.csv", encoding="cp949")
 
