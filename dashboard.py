@@ -14,6 +14,7 @@ import numpy as np
 import time
 import warnings
 warnings.filterwarnings('ignore')
+import tqdm
 # %%
 # * layout 정의 및 dataframe 정의
 st.set_page_config(page_title="연안 냉수대 시각화", page_icon=":bar_chart:", layout="wide")
@@ -27,7 +28,7 @@ fl = st.file_uploader(":file_folder: Upload a file", type=(["csv", "txt", "xlsx"
 #     st.write(filename)
 #     df = pd.read_csv(fl, encoding="cp949")
 if True:
-    upload_dir = r"C:/Users/YS/Desktop/연안_빅데이터/연안_빅데이터_플랫폼(업로드데이터)/22년도/04.연안_냉수대_속보_시계열_데이터/냉수대원본/플랫폼(업로드용)"
+    upload_dir = r"D:/연안_빅데이터/연안_빅데이터_플랫폼(업로드데이터)/22년도/04.연안_냉수대_속보_시계열_데이터/냉수대원본/플랫폼(업로드용)"
     # os.chdir(upload_dir)
     df = pd.read_csv("./2010-2023년 냉수대속보데이터.csv", encoding="cp949")
 
@@ -114,7 +115,7 @@ with col2:
             sizeref=2.0 * max(df3['Data_Count']) / (30 ** 2),
             sizemode='area',
             color=df3['CP_WTEM'],  # 평균 온도에 따라 색상 표시
-            colorscale='bluyl_r',  # 색상 스케일 설정
+            colorscale='bluyl_r',  # 색상 스케일 설정 #todo 
             opacity=0.8,  # 원의 투명도 설정
             colorbar=dict(title='최저 온도'),  # 색상 바 설정
         ),
@@ -156,3 +157,5 @@ with chart2:
                             y=df3["CP_WTEM"],
                             showlegend=False, opacity=0.5))
     st.plotly_chart(fig4)
+
+# %%
